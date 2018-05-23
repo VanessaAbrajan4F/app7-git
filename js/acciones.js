@@ -1,10 +1,10 @@
 // JavaScript Document
 $(document).ready(function(e) {//escuchador de eventos
     document.addEventListener("deviceready",function(){ //deslizar a la isquierda
-		$('#Izquierda').on("swipeleft",function(){
-			navigator.notification.alert("Deslizo hacia la Izquierda",function(){"Aplicacion7", "Ok"}); //aparece mensaje alert
+		$('#izquierda').on("swipeleft",function(){
+			navigator.notification.alert("Deslizo hacia la izquierda",function(){"Aplicacion7", "Ok"}); //aparece mensaje alert
 		}); //cierre swipe isquierda
-		$('#Derecha').on("swiperight",function() { //deslizar Derecha
+		$('#derecha').on("swiperight",function() { //deslizar derecha
 			navigator.notification.confirm("¿Que quieres hacer?",function(op){ //aparece ,mensaje para confirmar
 				switch(op) //variable op para las opcciones 
 				{
