@@ -1,22 +1,27 @@
 // JavaScript Document
-$(document).ready(function(e) {
-	document.addEventListener("deviceready",function(){ //escuchador de eventos
-		$('#Izquierda').on("swipeleft",function(){ //deslizar a la izquierda
-			navigator.notification.alert("Deslizó hacia la Izquierda",function(){"aplicacion 7", "Ok"}); //aparece mensaje alert
-		}); //cierre swipe izquierda
-		$('#Derecha').on("swiperight",function(){ //deslizar a la derecha
-			navigator.notification.confirm("¿Que quieres hacer?",function(op){ //aparece mensaje para confirmar
-				switch(op) //variable op para las opciones
-				{
-					case 1:
-					navigator.notification.beep(1); //suena el dispositivo
-					break; 
-					
-					case 2:
-					navigator.notification.vibrate(3000); //vibra el dispositivo
-					break;
-				}
-			},"aplicacion7","Beepear,Vibrar,Cancelar");
-			});
-    },false);
+
+ $(document).ready(function (e){
+	 document.addEventListener ("deviceready",function(){
+		 
+		 $('#izquierda').on("swipeleft",function(){
+			 navigator.notification. alert("Deslizo a la izquierda",function(){"Aplicasion7","Aceptar"});   
 });
+
+$('#derecha').on("swiperight",function(){
+	navigator.notification. confirm("¿Que quieres hacer?",function(opt){
+		switch(opt)
+		{
+			case 1:
+			navigator.notification.beep(1);
+			break;
+			
+			case 2:
+			navigator.notification.vibrate(1000);
+			break;		
+		}
+	},"Aplicacion7","Beep,Vibrar,Cancelar");
+	
+});
+	 },false);
+ });
+			
